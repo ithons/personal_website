@@ -1,3 +1,15 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended" // Added Prettier integration
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // Disable rule for React 17+
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Allow implicit return types
+    "@typescript-eslint/no-unused-vars": "error" // Keep the rule for unused variables
+  }
 }
